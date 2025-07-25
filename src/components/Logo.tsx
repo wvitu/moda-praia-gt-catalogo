@@ -1,11 +1,10 @@
 import React from 'react';
+import logoGT from '@/assets/logo-gt.png';
 
 const Logo = () => {
   return (
     <div className="flex items-center space-x-3">
-      <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center shadow-glow">
-        <span className="text-white font-bold text-xl">GT</span>
-      </div>
+      <img src={logoGT} alt="Moda Praia GT" className="w-12 h-12" />
       <div className="flex flex-col">
         <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
           Moda Praia GT

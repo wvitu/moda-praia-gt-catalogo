@@ -15,29 +15,41 @@ import beachHat from '@/assets/beach-hat.jpg';
 
 const Index = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5584999999999?text=Olá! Gostaria de conhecer o catálogo da Moda Praia GT', '_blank');
+    window.open('https://wa.me/5584981506259?text=Olá! Gostaria de conhecer o catálogo da Moda Praia GT', '_blank');
+  };
+
+  const handleCatalogClick = () => {
+    window.open('https://wa.me/c/5584981506259', '_blank');
+  };
+
+  const handleVipGroupClick = () => {
+    window.open('https://chat.whatsapp.com/KteiuJIcAKi5qlPRlsIFQs', '_blank');
+  };
+
+  const handleInstagramClick = () => {
+    window.open('https://www.instagram.com/modapraiagt_/', '_blank');
   };
 
   const features = [
     {
       icon: Truck,
-      title: "Frete Rápido",
-      description: "Envio econômico para todo o Brasil com transportadoras confiáveis"
+      title: "Frete Ágil",
+      description: "Envio para todo o Brasil com custo econômico e diversas transportadoras"
     },
     {
       icon: Package,
-      title: "+100 Modelos",
-      description: "Catálogo atualizado toda semana com as últimas tendências"
+      title: "+100 Itens Atacado",
+      description: "Catálogo com mais de 100 itens de atacado disponíveis"
     },
     {
       icon: MessageCircle,
       title: "Suporte WhatsApp",
-      description: "Atendimento direto e personalizado via WhatsApp"
+      description: "Atendimento direto para lojistas via WhatsApp"
     },
     {
       icon: ShoppingBag,
-      title: "Pedido Mínimo",
-      description: "Valores acessíveis para começar sua revenda"
+      title: "Pedido Mínimo R$ 300",
+      description: "Primeira compra: mínimo 10 peças (produtos variados)"
     }
   ];
 
@@ -115,21 +127,32 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Moda Praia GT
             <span className="block text-2xl md:text-3xl mt-2 opacity-90">
-              Revenda com Estilo, Lucro e Agilidade!
+              Atacado para Lojistas de Todo o Brasil!
             </span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
-            Atacado com +100 modelos disponíveis e envio para todo o Brasil
+            +100 itens de atacado: bolsas, chapéus, vestuário e peças promocionais
           </p>
-          <Button 
-            variant="hero" 
-            size="lg" 
-            onClick={handleWhatsAppClick}
-            className="text-xl px-8 py-4"
-          >
-            <MessageCircle className="w-6 h-6" />
-            Acessar Catálogo no WhatsApp
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              onClick={handleCatalogClick}
+              className="text-xl px-8 py-4"
+            >
+              <MessageCircle className="w-6 h-6" />
+              Ver Catálogo Completo
+            </Button>
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              onClick={handleVipGroupClick}
+              className="text-xl px-8 py-4"
+            >
+              <Users className="w-6 h-6" />
+              Grupo VIP Atacado
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -138,10 +161,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Por que revender com a Moda Praia GT?
+              Por que comprar atacado com a Moda Praia GT?
             </h2>
             <p className="text-xl text-muted-foreground">
-              Oferecemos tudo que você precisa para ter sucesso
+              Oferecemos tudo que lojistas precisam para ter sucesso
             </p>
           </div>
           
@@ -172,8 +195,8 @@ const Index = () => {
           </div>
           
           <div className="text-center">
-            <Button variant="cta" size="lg" onClick={handleWhatsAppClick}>
-              Ver Catálogo Completo
+            <Button variant="cta" size="lg" onClick={handleCatalogClick}>
+              Solicitar Orçamento Gratuito
             </Button>
           </div>
         </div>
@@ -204,10 +227,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Revender com a gente é simples
+              Como funciona o atacado
             </h2>
             <p className="text-xl text-muted-foreground">
-              Apenas 3 passos para começar
+              Processo simples para lojistas
             </p>
           </div>
           
@@ -216,24 +239,24 @@ const Index = () => {
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl font-bold text-white">1</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Entre no Catálogo</h3>
-              <p className="text-muted-foreground">Acesse nosso catálogo completo via WhatsApp</p>
+              <h3 className="text-xl font-semibold mb-4">Solicite Orçamento</h3>
+              <p className="text-muted-foreground">Entre no WhatsApp e solicite orçamento gratuito</p>
             </div>
             
             <div className="text-center">
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl font-bold text-white">2</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Escolha e Peça</h3>
-              <p className="text-muted-foreground">Selecione seus produtos e feche o pedido conosco</p>
+              <h3 className="text-xl font-semibold mb-4">Feche o Pedido</h3>
+              <p className="text-muted-foreground">Mínimo 10 peças (primeira compra) - Pedido mínimo R$ 300</p>
             </div>
             
             <div className="text-center">
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl font-bold text-white">3</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Receba em Casa</h3>
-              <p className="text-muted-foreground">Produto chega no seu endereço com frete acessível</p>
+              <h3 className="text-xl font-semibold mb-4">Receba ou Retire</h3>
+              <p className="text-muted-foreground">Retirada em Natal/RN ou envio para todo Brasil</p>
             </div>
           </div>
         </div>
@@ -243,20 +266,31 @@ const Index = () => {
       <section className="py-20 bg-gradient-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Pronta para lucrar com Moda Praia?
+            Pronto para comprar no atacado?
           </h2>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
-            Receba o catálogo agora mesmo e comece a vender hoje!
+            Solicite seu orçamento gratuito e comece a lucrar hoje!
           </p>
-          <Button 
-            variant="secondary" 
-            size="lg" 
-            onClick={handleWhatsAppClick}
-            className="text-xl px-8 py-4 hover:scale-105 transition-transform"
-          >
-            <MessageCircle className="w-6 h-6" />
-            Quero Revender
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              onClick={handleWhatsAppClick}
+              className="text-xl px-8 py-4 hover:scale-105 transition-transform"
+            >
+              <MessageCircle className="w-6 h-6" />
+              Solicitar Orçamento
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              onClick={handleVipGroupClick}
+              className="text-xl px-8 py-4 hover:scale-105 transition-transform border-white text-white hover:bg-white hover:text-primary"
+            >
+              <Users className="w-6 h-6" />
+              Grupo VIP
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -265,31 +299,48 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Valores acessíveis e competitivos
+              Política de Atacado
             </h2>
             <p className="text-xl text-muted-foreground">
-              Comece com pouco e lucre muito
+              Condições claras e transparentes
             </p>
           </div>
           
-          <div className="max-w-3xl mx-auto bg-card rounded-2xl p-8 shadow-elegant border border-border">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div>
-                <h3 className="text-2xl font-bold text-primary mb-2">Kit Inicial</h3>
-                <p className="text-3xl font-bold text-foreground mb-2">R$ 199</p>
-                <p className="text-muted-foreground">10 peças variadas</p>
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="bg-card rounded-2xl p-8 shadow-elegant border border-border">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-2">Primeira Compra</h3>
+                  <p className="text-3xl font-bold text-foreground mb-2">10 peças</p>
+                  <p className="text-muted-foreground">Mínimo (produtos variados)</p>
+                </div>
+                
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-2">Pedido Mínimo</h3>
+                  <p className="text-3xl font-bold text-foreground mb-2">R$ 300</p>
+                  <p className="text-muted-foreground">Para envio</p>
+                </div>
+                
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-2">Desconto</h3>
+                  <p className="text-3xl font-bold text-foreground mb-2">Caixa Fechada</p>
+                  <p className="text-muted-foreground">Condições especiais</p>
+                </div>
               </div>
               
-              <div>
-                <h3 className="text-2xl font-bold text-primary mb-2">Margem</h3>
-                <p className="text-3xl font-bold text-foreground mb-2">até 40%</p>
-                <p className="text-muted-foreground">Em peças promocionais</p>
+              <div className="border-t pt-6">
+                <h4 className="text-lg font-semibold mb-4 text-foreground">Formas de Pagamento:</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-muted-foreground">
+                  <div>• PIX/Transferência: Preço de atacado à vista</div>
+                  <div>• Cartão via Mercado Pago: Acréscimo de taxas</div>
+                </div>
               </div>
               
-              <div>
-                <h3 className="text-2xl font-bold text-primary mb-2">Desconto</h3>
-                <p className="text-3xl font-bold text-foreground mb-2">Especial</p>
-                <p className="text-muted-foreground">Pedidos acima de 100 peças</p>
+              <div className="border-t pt-6 mt-6">
+                <h4 className="text-lg font-semibold mb-4 text-foreground">Retirada:</h4>
+                <p className="text-sm text-muted-foreground">
+                  R. Erivan França, 33 - Piso 1, Orla de Ponta Negra, Natal/RN - CEP: 59090-165
+                </p>
               </div>
             </div>
           </div>
@@ -314,11 +365,11 @@ const Index = () => {
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span>(84) 99999-9999</span>
+                  <span>(84) 98150-6259</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 cursor-pointer hover:text-primary" onClick={handleWhatsAppClick}>
                   <MessageCircle className="w-4 h-4" />
-                  <span>WhatsApp</span>
+                  <span>WhatsApp Atacado</span>
                 </div>
               </div>
             </div>
@@ -326,9 +377,9 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Redes Sociais</h4>
               <div className="space-y-2">
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 cursor-pointer hover:text-primary" onClick={handleInstagramClick}>
                   <Instagram className="w-4 h-4" />
-                  <span>@modapraiagt</span>
+                  <span>@modapraiagt_</span>
                 </div>
               </div>
             </div>
@@ -337,7 +388,7 @@ const Index = () => {
               <h4 className="text-lg font-semibold mb-4">Localização</h4>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
-                <span>Enviamos de RN para todo o Brasil</span>
+                <span>Natal/RN - Enviamos para todo o Brasil</span>
               </div>
             </div>
           </div>
@@ -352,6 +403,17 @@ const Index = () => {
               </a>
               <a href="#" className="text-primary hover:text-primary-dark transition-colors">
                 Termos de Uso
+              </a>
+            </div>
+            <div className="mt-4 text-sm text-secondary-foreground/60">
+              Desenvolvido por{' '}
+              <a 
+                href="https://github.com/wandersondev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary-dark transition-colors font-medium"
+              >
+                Wanderson Vitor DEV
               </a>
             </div>
           </div>
