@@ -82,21 +82,27 @@ const Index = () => {
 
   const testimonials = [
     {
-      name: "Fernanda Silva",
-      location: "São Paulo, SP",
-      testimonial: "Já revendi mais de 200 peças! Envio rápido e ótimo atendimento.",
+      name: "Soul Store",
+      location: "João Pessoa, PB",
+      testimonial: "Atendimento top, entrega no prazo certo e peças de qualidade.",
       rating: 5
     },
     {
-      name: "Mariana Costa",
-      location: "Salvador, BA",
-      testimonial: "Catálogo lindo e peças de qualidade, clientes amam!",
+      name: "Francisca Gomes",
+      location: "São Luís, MA",
+      testimonial: "Já sou cliente a mais de dois anos. Material de ótima qualidade, preço acessível e excelente atendimento! Super recomendado!!!",
       rating: 5
     },
     {
-      name: "Ana Oliveira",
-      location: "Fortaleza, CE",
-      testimonial: "Margem excelente e produtos que vendem sozinhos!",
+      name: "Adriana Moita",
+      location: "Rio Grande, RS",
+      testimonial: "Ótimo atendimento, mercadoria entregue rapidamente, muito bom comprar com eles",
+      rating: 5
+    },
+    {
+      name: "Menina do Rio",
+      location: "Boa Vista, RR",
+      testimonial: "Muito atenciosos e eficientes. Recomendo",
       rating: 5
     }
   ];
@@ -214,11 +220,41 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} {...testimonial} />
-            ))}
-          </div>
+          <div className="relative">
+  <div
+    className="flex overflow-x-auto gap-4 scroll-smooth no-scrollbar"
+    ref={(el) => (window.testimonialScroll = el)}
+  >
+    {testimonials.concat(testimonials).map((testimonial, index) => (
+      <div className="min-w-[300px] max-w-[350px] flex-shrink-0">
+        <TestimonialCard key={index} {...testimonial} />
+      </div>
+    ))}
+  </div>
+
+  {/* Botões de navegação */}
+  <button
+    onClick={() => {
+      const el = window.testimonialScroll;
+      el.scrollLeft -= 350;
+      if (el.scrollLeft <= 0) el.scrollLeft = el.scrollWidth / 2;
+    }}
+    className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 rounded-full shadow p-2"
+  >
+    ◀
+  </button>
+  <button
+    onClick={() => {
+      const el = window.testimonialScroll;
+      el.scrollLeft += 350;
+      if (el.scrollLeft >= el.scrollWidth / 2) el.scrollLeft = 0;
+    }}
+    className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 rounded-full shadow p-2"
+  >
+    ▶
+  </button>
+</div>
+
         </div>
       </section>
 
