@@ -38,7 +38,7 @@ const Index = () => {
     },
     {
       icon: Package,
-      title: "+100 Itens Atacado",
+      title: "+200 Itens Atacado",
       description: "Catálogo com mais de 100 itens de atacado disponíveis"
     },
     {
@@ -56,21 +56,21 @@ const Index = () => {
   const products = [
     {
       image: bikiniPurple,
-      title: "Biquíni Premium",
-      price: "A partir de R$ 35",
-      description: "Revenda por até R$ 89"
+      title: "Conjunto Biquíni",
+      price: "A partir de R$ 25",
+      description: "Revenda por até R$ 99,90"
     },
     {
       image: coverUpBlack,
-      title: "Saída de Praia",
-      price: "A partir de R$ 45",
-      description: "Revenda por até R$ 120"
+      title: "Canga/Saída de Praia",
+      price: "A partir de R$ 15",
+      description: "Revenda por até R$ 69,90"
     },
     {
       image: beachBag,
-      title: "Bolsa de Praia",
-      price: "A partir de R$ 28",
-      description: "Revenda por até R$ 79"
+      title: "Monte seu KIT de Bolsa e Chapéu de Praia",
+      price: "A partir de R$ 40",
+      description: "Revenda por até R$ 129,90"
     },
     {
       image: beachHat,
@@ -131,7 +131,7 @@ const Index = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
-            +100 itens de atacado: bolsas, chapéus, vestuário e peças promocionais
+            Compre em atacado de forma fácil, com preço justo, sem precisar de CNPJ e envio ágil para todo o Brasil! Peças que podem te dar lucro superior a 200%!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -144,7 +144,7 @@ const Index = () => {
               Ver Catálogo Completo
             </Button>
             <Button 
-              variant="secondary" 
+              variant="hero" 
               size="lg" 
               onClick={handleVipGroupClick}
               className="text-xl px-8 py-4"
@@ -164,7 +164,7 @@ const Index = () => {
               Por que comprar atacado com a Moda Praia GT?
             </h2>
             <p className="text-xl text-muted-foreground">
-              Oferecemos tudo que lojistas precisam para ter sucesso
+              Compre tudo que você precisa para sua loja de moda praia em um só lugar!
             </p>
           </div>
           
@@ -184,7 +184,7 @@ const Index = () => {
               Produtos em Destaque
             </h2>
             <p className="text-xl text-muted-foreground">
-              Conheça alguns dos nossos best-sellers
+              Conheça alguns dos nossos mais vendidos
             </p>
           </div>
           
@@ -196,7 +196,7 @@ const Index = () => {
           
           <div className="text-center">
             <Button variant="cta" size="lg" onClick={handleCatalogClick}>
-              Solicitar Orçamento Gratuito
+              Solicite seu orçamento agora mesmo!
             </Button>
           </div>
         </div>
@@ -276,13 +276,13 @@ const Index = () => {
               variant="secondary" 
               size="lg" 
               onClick={handleWhatsAppClick}
-              className="text-xl px-8 py-4 hover:scale-105 transition-transform"
+              className="text-xl px-8 py-4 hover:scale-105 transition-transform border-white text-white hover:bg-white hover:text-primary"
             >
               <MessageCircle className="w-6 h-6" />
               Solicitar Orçamento
             </Button>
             <Button 
-              variant="outline" 
+              variant="secondary" 
               size="lg" 
               onClick={handleVipGroupClick}
               className="text-xl px-8 py-4 hover:scale-105 transition-transform border-white text-white hover:bg-white hover:text-primary"
@@ -388,7 +388,7 @@ const Index = () => {
               <h4 className="text-lg font-semibold mb-4">Localização</h4>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
-                <span>Natal/RN - Enviamos para todo o Brasil</span>
+                <span>R Erivan França 33, Ponta Negra - Natal/RN. Enviamos para todo o Brasil</span>
               </div>
             </div>
           </div>
@@ -408,12 +408,12 @@ const Index = () => {
             <div className="mt-4 text-sm text-secondary-foreground/60">
               Desenvolvido por{' '}
               <a 
-                href="https://github.com/wandersondev" 
+                href="https://github.com/wvitu" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary-dark transition-colors font-medium"
               >
-                Wanderson Vitor DEV
+                Vitor DEV
               </a>
             </div>
           </div>
