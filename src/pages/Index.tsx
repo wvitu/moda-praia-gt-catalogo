@@ -142,13 +142,13 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-gradient-hero opacity-70"></div>
         </div>
-        
+
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Moda Praia GT
@@ -160,18 +160,18 @@ const Index = () => {
             Compre em atacado de forma fácil, com preço justo, sem precisar de CNPJ e envio ágil para todo o Brasil! Peças que podem te dar lucro superior a 200%!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="hero" 
-              size="lg" 
+            <Button
+              variant="hero"
+              size="lg"
               onClick={handleCatalogClick}
               className="text-xl px-8 py-4"
             >
               <MessageCircle className="w-6 h-6" />
               Ver Catálogo Completo
             </Button>
-            <Button 
-              variant="hero" 
-              size="lg" 
+            <Button
+              variant="hero"
+              size="lg"
               onClick={handleVipGroupClick}
               className="text-xl px-8 py-4"
             >
@@ -193,7 +193,7 @@ const Index = () => {
               Compre tudo que você precisa para sua loja de moda praia em um só lugar!
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
@@ -213,13 +213,13 @@ const Index = () => {
               Conheça alguns dos nossos mais vendidos
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {products.map((product, index) => (
               <ProductCard key={index} {...product} />
             ))}
           </div>
-          
+
           <div className="text-center">
             <Button variant="cta" size="lg" onClick={handleCatalogClick}>
               Solicite seu orçamento agora mesmo!
@@ -228,64 +228,64 @@ const Index = () => {
         </div>
       </section>
 
-{/* Depoimentos Section */}
-<section className="py-20 bg-muted/30">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-        Veja o que nossos parceiros dizem
-      </h2>
-      <p className="text-xl text-muted-foreground">
-        SOMOS 100% 5 ESTRELAS NO GOOGLE!
-      </p>
-    </div>
-
-    <div className="relative">
-      {/* Faixa de cards com rolagem horizontal */}
-      <div
-        className="overflow-x-auto flex gap-4 scroll-smooth no-scrollbar px-8"
-        ref={(el) => (window.testemunhoscroll = el)}
-      >
-        {testemunhos.concat(testemunhos).map((testimonial, index) => (
-          <div className="min-w-[300px] max-w-[350px] flex-shrink-0" key={index}>
-            <TestimonialCard {...testimonial} />
+      {/* Depoimentos Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Veja o que nossos parceiros dizem
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              SOMOS 100% 5 ESTRELAS NO GOOGLE!
+            </p>
           </div>
-        ))}
-      </div>
 
-      {/* Botão esquerda */}
-      <div className="absolute inset-y-0 left-0 flex items-center -translate-x-full pl-4">
-        <button
-          onClick={() => {
-            const el = window.testemunhoscroll;
-            el.scrollLeft -= 350;
-            if (el.scrollLeft <= 0) el.scrollLeft = el.scrollWidth / 2;
-          }}
-          className="bg-white rounded-full shadow border border-muted p-2 hover:scale-105 transition"
-        >
-          ◀
-        </button>
-      </div>
+          <div className="relative">
+            {/* Faixa de cards com rolagem horizontal */}
+            <div
+              className="overflow-x-auto flex gap-4 scroll-smooth no-scrollbar px-8"
+              ref={(el) => (window.testemunhoscroll = el)}
+            >
+              {testemunhos.concat(testemunhos).map((testimonial, index) => (
+                <div className="min-w-[300px] max-w-[350px] flex-shrink-0" key={index}>
+                  <TestimonialCard {...testimonial} />
+                </div>
+              ))}
+            </div>
 
-      {/* Botão direita */}
-      <div className="absolute inset-y-0 right-0 flex items-center translate-x-full pr-4">
-        <button
-          onClick={() => {
-            const el = window.testemunhoscroll;
-            el.scrollLeft += 350;
-            if (el.scrollLeft >= el.scrollWidth / 2) el.scrollLeft = 0;
-          }}
-          className="bg-white rounded-full shadow border border-muted p-2 hover:scale-105 transition"
-        >
-          ▶
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
+            {/* Botão esquerda */}
+            <div className="absolute inset-y-0 left-0 flex items-center -translate-x-full pl-4">
+              <button
+                onClick={() => {
+                  const el = window.testemunhoscroll;
+                  el.scrollLeft -= 350;
+                  if (el.scrollLeft <= 0) el.scrollLeft = el.scrollWidth / 2;
+                }}
+                className="bg-white rounded-full shadow border border-muted p-2 hover:scale-105 transition"
+              >
+                ◀
+              </button>
+            </div>
+
+            {/* Botão direita */}
+            <div className="absolute inset-y-0 right-0 flex items-center translate-x-full pr-4">
+              <button
+                onClick={() => {
+                  const el = window.testemunhoscroll;
+                  el.scrollLeft += 350;
+                  if (el.scrollLeft >= el.scrollWidth / 2) el.scrollLeft = 0;
+                }}
+                className="bg-white rounded-full shadow border border-muted p-2 hover:scale-105 transition"
+              >
+                ▶
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
-      
+
 
       {/* Como Funciona Section */}
       <section className="py-20">
@@ -298,7 +298,7 @@ const Index = () => {
               Processo simples para lojistas e revendedores
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
@@ -307,7 +307,7 @@ const Index = () => {
               <h3 className="text-xl font-semibold mb-4">Solicite o catálogo</h3>
               <p className="text-muted-foreground">Entre no WhatsApp e solicite o catálogo e escolha seus produtos</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl font-bold text-white">2</span>
@@ -315,7 +315,7 @@ const Index = () => {
               <h3 className="text-xl font-semibold mb-4">Feche o Pedido</h3>
               <p className="text-muted-foreground">Mínimo 10 peças (primeira compra) - Pedido mínimo R$ 300.</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl font-bold text-white">3</span>
@@ -337,18 +337,18 @@ const Index = () => {
             Solicite seu orçamento gratuito e comece a lucrar hoje!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="secondary" 
-              size="lg" 
+            <Button
+              variant="secondary"
+              size="lg"
               onClick={handleWhatsAppClick}
               className="text-xl px-8 py-4 hover:scale-105 transition-transform border-white text-white hover:bg-white hover:text-primary"
             >
               <MessageCircle className="w-6 h-6" />
               Solicitar Orçamento
             </Button>
-            <Button 
-              variant="secondary" 
-              size="lg" 
+            <Button
+              variant="secondary"
+              size="lg"
               onClick={handleVipGroupClick}
               className="text-xl px-8 py-4 hover:scale-105 transition-transform border-white text-white hover:bg-white hover:text-primary"
             >
@@ -359,99 +359,80 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Preços Section */}
-      <section className="py-20">
-        <div className="mt-2 space-x-4 flex flex-wrap justify-center items-center gap-4">
-  <InfoModal title="Política de Privacidade" trigger={<span className="text-primary hover:underline cursor-pointer">Política de Privacidade</span>}>
-    Respeitamos sua privacidade. Seus dados serão utilizados apenas para fins comerciais e nunca compartilhados com terceiros.
-  </InfoModal>
-
-  <InfoModal title="Termos de Uso" trigger={<span className="text-primary hover:underline cursor-pointer">Termos de Uso</span>}>
-    Ao utilizar este site, você concorda com nossos termos de uso. Todas as vendas são realizadas conforme regras do Código de Defesa do Consumidor.
-  </InfoModal>
-
-  <InfoModal title="Quem Somos" trigger={<span className="text-primary hover:underline cursor-pointer">Quem Somos</span>}>
-    A Moda Praia GT é referência em moda praia no atacado. Atuamos em todo o Brasil com foco em lojistas e revendedores.
-  </InfoModal>
-
-  <InfoModal title="Trocas e Devoluções" trigger={<span className="text-primary hover:underline cursor-pointer">Trocas e Devoluções</span>}>
-    Aceitamos trocas por defeito em até 7 dias. Entre em contato via WhatsApp para iniciar o processo.
-  </InfoModal>
-
-  <InfoModal title="Perguntas Frequentes" trigger={<span className="text-primary hover:underline cursor-pointer">Perguntas Frequentes</span>}>
-    <ul className="list-disc pl-4 space-y-2">
-      <li>Pedido mínimo: R$300 ou 10 peças.</li>
-      <li>Enviamos para todo o Brasil.</li>
-      <li>Não precisa de CNPJ para comprar.</li>
-    </ul>
-  </InfoModal>
-</div>
-
-      </section>
-
       {/* Footer */}
       <footer className="bg-secondary text-secondary-foreground py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="mb-4">
-                <Logo />
-              </div>
-              <p className="text-secondary-foreground/80">
-                Sua parceira ideal para revenda de moda praia com qualidade e estilo.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contato</h4>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4" />
-                  <span>(84) 98150-6259</span>
-                </div>
-                <div className="flex items-center space-x-2 cursor-pointer hover:text-primary" onClick={handleWhatsAppClick}>
-                  <MessageCircle className="w-4 h-4" />
-                  <span>WhatsApp Atacado</span>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Redes Sociais</h4>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2 cursor-pointer hover:text-primary" onClick={handleInstagramClick}>
-                  <Instagram className="w-4 h-4" />
-                  <span>@modapraiagt_</span>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Localização</h4>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4" />
-                <span>R Erivan França 33, Ponta Negra - Natal/RN. Enviamos para todo o Brasil</span>
-              </div>
-            </div>
-          </div>
-          
           <div className="border-t border-secondary-foreground/20 pt-8 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              {/* Logo + descrição */}
+              <div>
+                <div className="mb-4">
+                  <Logo />
+                </div>
+                <p className="text-secondary-foreground/80">
+                  Sua parceira ideal para revenda de moda praia com qualidade e estilo.
+                </p>
+              </div>
+
+              {/* Contato + Instagram */}
+              <div className="flex flex-col items-center">
+                <h4 className="text-lg font-semibold mb-4">Contato</h4>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-4 h-4" />
+                    <span>(84) 98150-6259</span>
+                  </div>
+                  <div className="flex items-center space-x-2 cursor-pointer hover:text-primary" onClick={handleWhatsAppClick}>
+                    <MessageCircle className="w-4 h-4" />
+                    <span>WhatsApp Atacado</span>
+                  </div>
+                  <div className="flex items-center space-x-2 cursor-pointer hover:text-primary" onClick={handleInstagramClick}>
+                    <Instagram className="w-4 h-4" />
+                    <span>@modapraiagt_</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Informações institucionais */}
+              <div>
+                <h4 className="text-lg font-semibold mb-4">Institucional</h4>
+                <div className="flex flex-col space-y-2 text-primary text-sm">
+                  <InfoModal center title="Política de Privacidade" trigger={<span className="cursor-pointer hover:underline">Política de Privacidade</span>}>
+                    Respeitamos sua privacidade. Seus dados serão utilizados apenas para fins comerciais e nunca compartilhados com terceiros.
+                  </InfoModal>
+
+                  <InfoModal center title="Termos de Uso" trigger={<span className="cursor-pointer hover:underline">Termos de Uso</span>}>
+                    Ao utilizar este site, você concorda com nossos termos. Todas as vendas seguem o Código de Defesa do Consumidor.
+                  </InfoModal>
+
+                  <InfoModal center title="Quem Somos" trigger={<span className="cursor-pointer hover:underline">Quem Somos</span>}>
+                    A Moda Praia GT é referência em moda praia no atacado. Atuamos com lojistas e revendedores em todo o Brasil.
+                  </InfoModal>
+
+                  <InfoModal center title="Trocas e Devoluções" trigger={<span className="cursor-pointer hover:underline">Trocas e Devoluções</span>}>
+                    Aceitamos trocas por defeito em até 7 dias. Entre em contato via WhatsApp para iniciar o processo.
+                  </InfoModal>
+
+                  <InfoModal center title="Perguntas Frequentes" trigger={<span className="cursor-pointer hover:underline">Perguntas Frequentes</span>}>
+                    <ul className="list-disc pl-4 space-y-1">
+                      <li>Pedido mínimo: R$300 ou 10 peças.</li>
+                      <li>Enviamos para todo o Brasil.</li>
+                      <li>Não precisa de CNPJ para comprar.</li>
+                    </ul>
+                  </InfoModal>
+                </div>
+              </div>
+            </div>
+
             <p className="text-secondary-foreground/80">
               © 2025 Moda Praia GT. Todos os direitos reservados.
             </p>
-            <div className="mt-2 space-x-4">
-              <a href="#" className="text-primary hover:text-primary-dark transition-colors">
-                Política de Privacidade
-              </a>
-              <a href="#" className="text-primary hover:text-primary-dark transition-colors">
-                Termos de Uso
-              </a>
-            </div>
+
             <div className="mt-4 text-sm text-secondary-foreground/60">
               Desenvolvido por{' '}
-              <a 
-                href="https://github.com/wvitu" 
-                target="_blank" 
+              <a
+                href="https://github.com/wvitu"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary-dark transition-colors font-medium"
               >
