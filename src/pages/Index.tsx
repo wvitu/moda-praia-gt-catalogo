@@ -208,55 +208,64 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Depoimentos Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Veja o que nossos parceiros dizem
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Histórias reais de sucesso
-            </p>
+{/* Depoimentos Section */}
+<section className="py-20 bg-muted/30">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        Veja o que nossos parceiros dizem
+      </h2>
+      <p className="text-xl text-muted-foreground">
+        Histórias reais de sucesso
+      </p>
+    </div>
+
+    <div className="relative">
+      {/* Faixa de cards com rolagem horizontal */}
+      <div
+        className="overflow-x-auto flex gap-4 scroll-smooth no-scrollbar px-8"
+        ref={(el) => (window.testimonialScroll = el)}
+      >
+        {testimonials.concat(testimonials).map((testimonial, index) => (
+          <div className="min-w-[300px] max-w-[350px] flex-shrink-0" key={index}>
+            <TestimonialCard {...testimonial} />
           </div>
-          
-          <div className="relative">
-  <div
-    className="flex overflow-x-auto gap-4 scroll-smooth no-scrollbar"
-    ref={(el) => (window.testimonialScroll = el)}
-  >
-    {testimonials.concat(testimonials).map((testimonial, index) => (
-      <div className="min-w-[300px] max-w-[350px] flex-shrink-0">
-        <TestimonialCard key={index} {...testimonial} />
+        ))}
       </div>
-    ))}
+
+      {/* Botão esquerda */}
+      <div className="absolute inset-y-0 left-0 flex items-center -translate-x-full pl-4">
+        <button
+          onClick={() => {
+            const el = window.testimonialScroll;
+            el.scrollLeft -= 350;
+            if (el.scrollLeft <= 0) el.scrollLeft = el.scrollWidth / 2;
+          }}
+          className="bg-white rounded-full shadow border border-muted p-2 hover:scale-105 transition"
+        >
+          ◀
+        </button>
+      </div>
+
+      {/* Botão direita */}
+      <div className="absolute inset-y-0 right-0 flex items-center translate-x-full pr-4">
+        <button
+          onClick={() => {
+            const el = window.testimonialScroll;
+            el.scrollLeft += 350;
+            if (el.scrollLeft >= el.scrollWidth / 2) el.scrollLeft = 0;
+          }}
+          className="bg-white rounded-full shadow border border-muted p-2 hover:scale-105 transition"
+        >
+          ▶
+        </button>
+      </div>
+    </div>
   </div>
+</section>
 
-  {/* Botões de navegação */}
-  <button
-    onClick={() => {
-      const el = window.testimonialScroll;
-      el.scrollLeft -= 350;
-      if (el.scrollLeft <= 0) el.scrollLeft = el.scrollWidth / 2;
-    }}
-    className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 rounded-full shadow p-2"
-  >
-    ◀
-  </button>
-  <button
-    onClick={() => {
-      const el = window.testimonialScroll;
-      el.scrollLeft += 350;
-      if (el.scrollLeft >= el.scrollWidth / 2) el.scrollLeft = 0;
-    }}
-    className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 rounded-full shadow p-2"
-  >
-    ▶
-  </button>
-</div>
 
-        </div>
-      </section>
+      
 
       {/* Como Funciona Section */}
       <section className="py-20">
