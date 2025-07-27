@@ -80,7 +80,7 @@ const Index = () => {
     }
   ];
 
-  const testimonials = [
+  const testemunhos = [
     {
       name: "Soul Store",
       location: "João Pessoa, PB",
@@ -103,6 +103,24 @@ const Index = () => {
       name: "Menina do Rio",
       location: "Boa Vista, RR",
       testimonial: "Muito atenciosos e eficientes. Recomendo",
+      rating: 5
+    },
+    {
+      name: "Maria Tavares",
+      location: " Pipa, RN",
+      testimonial: "Loja linda,bem organizada, preço acessível e um atendimento diferenciado.❤️",
+      rating: 5
+    },
+    {
+      name: "Franciely A de Souza",
+      location: " São José dos Pinhais, PR",
+      testimonial: "Com toda certeza a melhor loja moda praia, muita variedade e atendimento excelente... Sou cliente fiel ❤️",
+      rating: 5
+    },
+    {
+      name: "Priscilla Rodrigues",
+      location: " Maricá, RJ",
+      testimonial: "Minha experiência é melhor ! Sou cliente fiel , amo os produtos da loja , pela qualidade e preço!",
       rating: 5
     }
   ];
@@ -216,7 +234,7 @@ const Index = () => {
         Veja o que nossos parceiros dizem
       </h2>
       <p className="text-xl text-muted-foreground">
-        Histórias reais de sucesso
+        SOMOS 100% 5 ESTRELAS NO GOOGLE!
       </p>
     </div>
 
@@ -224,9 +242,9 @@ const Index = () => {
       {/* Faixa de cards com rolagem horizontal */}
       <div
         className="overflow-x-auto flex gap-4 scroll-smooth no-scrollbar px-8"
-        ref={(el) => (window.testimonialScroll = el)}
+        ref={(el) => (window.testemunhoscroll = el)}
       >
-        {testimonials.concat(testimonials).map((testimonial, index) => (
+        {testemunhos.concat(testemunhos).map((testimonial, index) => (
           <div className="min-w-[300px] max-w-[350px] flex-shrink-0" key={index}>
             <TestimonialCard {...testimonial} />
           </div>
@@ -237,7 +255,7 @@ const Index = () => {
       <div className="absolute inset-y-0 left-0 flex items-center -translate-x-full pl-4">
         <button
           onClick={() => {
-            const el = window.testimonialScroll;
+            const el = window.testemunhoscroll;
             el.scrollLeft -= 350;
             if (el.scrollLeft <= 0) el.scrollLeft = el.scrollWidth / 2;
           }}
@@ -251,7 +269,7 @@ const Index = () => {
       <div className="absolute inset-y-0 right-0 flex items-center translate-x-full pr-4">
         <button
           onClick={() => {
-            const el = window.testimonialScroll;
+            const el = window.testemunhoscroll;
             el.scrollLeft += 350;
             if (el.scrollLeft >= el.scrollWidth / 2) el.scrollLeft = 0;
           }}
@@ -272,10 +290,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Como funciona o atacado
+              Como comprar no atacado?
             </h2>
             <p className="text-xl text-muted-foreground">
-              Processo simples para lojistas
+              Processo simples para lojistas e revendedores
             </p>
           </div>
           
@@ -284,8 +302,8 @@ const Index = () => {
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl font-bold text-white">1</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Solicite Orçamento</h3>
-              <p className="text-muted-foreground">Entre no WhatsApp e solicite orçamento gratuito</p>
+              <h3 className="text-xl font-semibold mb-4">Solicite o catálogo</h3>
+              <p className="text-muted-foreground">Entre no WhatsApp e solicite o catálogo e escolha seus produtos</p>
             </div>
             
             <div className="text-center">
@@ -293,15 +311,15 @@ const Index = () => {
                 <span className="text-3xl font-bold text-white">2</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Feche o Pedido</h3>
-              <p className="text-muted-foreground">Mínimo 10 peças (primeira compra) - Pedido mínimo R$ 300</p>
+              <p className="text-muted-foreground">Mínimo 10 peças (primeira compra) - Pedido mínimo R$ 300.</p>
             </div>
             
             <div className="text-center">
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl font-bold text-white">3</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Receba ou Retire</h3>
-              <p className="text-muted-foreground">Retirada em Natal/RN ou envio para todo Brasil</p>
+              <h3 className="text-xl font-semibold mb-4">Envio</h3>
+              <p className="text-muted-foreground">Escolha o método de envio que melhor lhe atende, após o pagamento o rastreio é enviado. Prontinho, é só aguardar receber e vender bastante!</p>
             </div>
           </div>
         </div>
