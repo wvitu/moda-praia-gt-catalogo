@@ -19,7 +19,7 @@ const Index = () => {
   };
 
   const handleCatalogClick = () => {
-    window.open('https://wa.me/c/5584981506259', '_blank');
+    window.open('https://wa.me/c/558481506259', '_blank');
   };
 
   const handleVipGroupClick = () => {
