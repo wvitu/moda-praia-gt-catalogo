@@ -398,110 +398,169 @@ const Index = () => {
                 <h4 className="text-lg font-semibold mb-4">Institucional</h4>
                 <div className="flex flex-col space-y-2 text-primary text-sm">
                   <InfoModal
-  center
-  title="Política de Privacidade"
-  trigger={<span className="cursor-pointer hover:underline">Política de Privacidade</span>}
->
-  <div className="max-h-[70vh] overflow-y-auto text-justify pr-4 text-sm leading-relaxed text-muted-foreground space-y-4">
-    <p>
-      A Moda Praia GT atacado, pessoa jurídica de direito privado, com sede na Rua Erivan França 33, orla de Ponta Negra, Natal/RN, inscrita no CNPJ sob o nº 38.108.294/0001-42, leva a sua privacidade a sério e zela pela segurança e proteção dos dados de seus clientes, parceiros, fornecedores e usuários.
-    </p>
-    <p>
-      Esta Política de Privacidade visa informar como utilizamos e divulgamos os dados coletados na Loja: https://moda-praia-gt-catalogo.vercel.app/.
-    </p>
-    <p className="font-semibold uppercase">
-      AO ACESSAR A LOJA, ENVIAR COMUNICAÇÕES OU FORNECER DADOS, VOCÊ DECLARA ESTAR CIENTE E DE ACORDO COM ESTA POLÍTICA.
-    </p>
+                    center
+                    title="Política de Privacidade"
+                    trigger={<span className="cursor-pointer hover:underline">Política de Privacidade</span>}
+                  >
+                    <div className="max-h-[70vh] overflow-y-auto text-justify pr-4 text-sm leading-relaxed text-muted-foreground space-y-4">
+                      <p>
+                        A Moda Praia GT atacado, pessoa jurídica de direito privado, com sede na Rua Erivan França 33, orla de Ponta Negra, Natal/RN, inscrita no CNPJ sob o nº 38.108.294/0001-42, leva a sua privacidade a sério e zela pela segurança e proteção dos dados de seus clientes, parceiros, fornecedores e usuários.
+                      </p>
+                      <p>
+                        Esta Política de Privacidade visa informar como utilizamos e divulgamos os dados coletados na Loja: https://moda-praia-gt-catalogo.vercel.app/.
+                      </p>
+                      <p className="font-semibold uppercase">
+                        AO ACESSAR A LOJA, ENVIAR COMUNICAÇÕES OU FORNECER DADOS, VOCÊ DECLARA ESTAR CIENTE E DE ACORDO COM ESTA POLÍTICA.
+                      </p>
 
-    <h2 className="font-semibold">1. Definições</h2>
-    <ul className="list-disc pl-4 space-y-2">
-      <li><strong>Dados Pessoais:</strong> informações que identificam alguém (nome, CPF, IP, etc.).</li>
-      <li><strong>Dados Sensíveis:</strong> dados sobre origem racial, religião, política, saúde, biometria etc.</li>
-      <li><strong>Tratamento de Dados:</strong> coleta, uso, armazenamento, exclusão, entre outros.</li>
-      <li><strong>Leis de Proteção de Dados:</strong> LGPD - Lei nº 13.709/18.</li>
-    </ul>
+                      <h2 className="font-semibold">1. Definições</h2>
+                      <ul className="list-disc pl-4 space-y-2">
+                        <li><strong>Dados Pessoais:</strong> informações que identificam alguém (nome, CPF, IP, etc.).</li>
+                        <li><strong>Dados Sensíveis:</strong> dados sobre origem racial, religião, política, saúde, biometria etc.</li>
+                        <li><strong>Tratamento de Dados:</strong> coleta, uso, armazenamento, exclusão, entre outros.</li>
+                        <li><strong>Leis de Proteção de Dados:</strong> LGPD - Lei nº 13.709/18.</li>
+                      </ul>
 
-    <h2 className="font-semibold">2. Uso dos Dados</h2>
-    <ul className="list-disc pl-4 space-y-2">
-      <li>Viabilizar compras e entregas.</li>
-      <li>Entrar em contato via telefone, e-mail, ou mensagens.</li>
-      <li>Personalizar experiência e promoções.</li>
-    </ul>
+                      <h2 className="font-semibold">2. Uso dos Dados</h2>
+                      <ul className="list-disc pl-4 space-y-2">
+                        <li>Viabilizar compras e entregas.</li>
+                        <li>Entrar em contato via telefone, e-mail, ou mensagens.</li>
+                        <li>Personalizar experiência e promoções.</li>
+                      </ul>
 
-    <h2 className="font-semibold">3. Não fornecimento</h2>
-    <p>
-      Caso opte por não fornecer dados, algumas funcionalidades podem não estar disponíveis.
-    </p>
+                      <h2 className="font-semibold">3. Não fornecimento</h2>
+                      <p>
+                        Caso opte por não fornecer dados, algumas funcionalidades podem não estar disponíveis.
+                      </p>
 
-    <h2 className="font-semibold">4. Dados coletados</h2>
-    <ul className="list-disc pl-4 space-y-2">
-      <li><strong>Contato:</strong> nome, telefone, e-mail, etc.</li>
-      <li><strong>Navegação:</strong> IP, localização, navegador, cookies, etc.</li>
-      <li><strong>Preferências:</strong> histórico e interesses de navegação.</li>
-    </ul>
+                      <h2 className="font-semibold">4. Dados coletados</h2>
+                      <ul className="list-disc pl-4 space-y-2">
+                        <li><strong>Contato:</strong> nome, telefone, e-mail, etc.</li>
+                        <li><strong>Navegação:</strong> IP, localização, navegador, cookies, etc.</li>
+                        <li><strong>Preferências:</strong> histórico e interesses de navegação.</li>
+                      </ul>
 
-    <h2 className="font-semibold">5. Compartilhamento</h2>
-    <p>
-      Compartilhamos dados com parceiros, prestadores de serviços e em caso de fusão ou aquisição.
-    </p>
+                      <h2 className="font-semibold">5. Compartilhamento</h2>
+                      <p>
+                        Compartilhamos dados com parceiros, prestadores de serviços e em caso de fusão ou aquisição.
+                      </p>
 
-    <h2 className="font-semibold">6. Transferência internacional</h2>
-    <p>
-      Os dados podem ser armazenados ou processados fora do Brasil.
-    </p>
+                      <h2 className="font-semibold">6. Transferência internacional</h2>
+                      <p>
+                        Os dados podem ser armazenados ou processados fora do Brasil.
+                      </p>
 
-    <h2 className="font-semibold">7. Coleta automática</h2>
-    <p>
-      Utilizamos cookies, pixels e tecnologias similares. Você pode desabilitar cookies nas configurações do navegador.
-    </p>
+                      <h2 className="font-semibold">7. Coleta automática</h2>
+                      <p>
+                        Utilizamos cookies, pixels e tecnologias similares. Você pode desabilitar cookies nas configurações do navegador.
+                      </p>
 
-    <h2 className="font-semibold">8. Seus direitos</h2>
-    <p>
-      Você pode solicitar: confirmação, acesso, correção, exclusão, anonimização, revogação de consentimento, etc., conforme a LGPD.
-    </p>
+                      <h2 className="font-semibold">8. Seus direitos</h2>
+                      <p>
+                        Você pode solicitar: confirmação, acesso, correção, exclusão, anonimização, revogação de consentimento, etc., conforme a LGPD.
+                      </p>
 
-    <h2 className="font-semibold">9. Segurança</h2>
-    <p>
-      Adotamos medidas técnicas e organizacionais para proteger seus dados. Nenhum sistema, porém, é 100% seguro.
-    </p>
+                      <h2 className="font-semibold">9. Segurança</h2>
+                      <p>
+                        Adotamos medidas técnicas e organizacionais para proteger seus dados. Nenhum sistema, porém, é 100% seguro.
+                      </p>
 
-    <h2 className="font-semibold">10. Links de terceiros</h2>
-    <p>
-      Não somos responsáveis pelas políticas de sites de terceiros acessados por links em nossa Loja.
-    </p>
+                      <h2 className="font-semibold">10. Links de terceiros</h2>
+                      <p>
+                        Não somos responsáveis pelas políticas de sites de terceiros acessados por links em nossa Loja.
+                      </p>
 
-    <h2 className="font-semibold">11. Atualizações</h2>
-    <p>
-      Podemos atualizar esta política. Em caso de alterações relevantes, avisaremos por nossos canais.
-    </p>
+                      <h2 className="font-semibold">11. Atualizações</h2>
+                      <p>
+                        Podemos atualizar esta política. Em caso de alterações relevantes, avisaremos por nossos canais.
+                      </p>
 
-    <h2 className="font-semibold">12. Contato</h2>
-    <p>
-      Para exercer seus direitos ou tirar dúvidas: <a href="mailto:wvitor.ccb@gmail.com" className="text-primary hover:underline">wvitor.ccb@gmail.com</a>.<br />
-      Responsável: Wanderson Vitor Almeida.
-    </p>
-  </div>
-</InfoModal>
-
-
-                  <InfoModal center title="Termos de Uso" trigger={<span className="cursor-pointer hover:underline">Termos de Uso</span>}>
-                    Ao utilizar este site, você concorda com nossos termos. Todas as vendas seguem o Código de Defesa do Consumidor.
+                      <h2 className="font-semibold">12. Contato</h2>
+                      <p>
+                        Para exercer seus direitos ou tirar dúvidas: <a href="mailto:wvitor.ccb@gmail.com" className="text-primary hover:underline">wvitor.ccb@gmail.com</a>.<br />
+                        Responsável: Wanderson Vitor Almeida.
+                      </p>
+                    </div>
                   </InfoModal>
 
-                  <InfoModal center title="Quem Somos" trigger={<span className="cursor-pointer hover:underline">Quem Somos</span>}>
-                    A Moda Praia GT é referência em moda praia no atacado. Atuamos com lojistas e revendedores em todo o Brasil.
+
+                  <InfoModal
+                    center
+                    title="Quem Somos"
+                    trigger={<span className="cursor-pointer hover:underline">Quem Somos</span>}
+                  >
+                    Nossa história começou em um período que foi um divisor de águas para muitos negócios: a pandemia.
+
+                    O CEO da empresa, diante de um cenário de incertezas e falta de perspectivas, começou a buscar formas de manter a renda. Alguns obstáculos — ou melhor, verdadeiras montanhas 😅 — foram essenciais para o surgimento da nossa empresa. Após tentativas como motorista de aplicativo (sofrendo até assaltos), motoboy e atendente de pizzaria, surgiu o interesse em estudar o e-commerce.
+
+                    Durante esse processo, Vitor identificou uma oportunidade promissora e uma demanda reprimida no mercado. Foram muitas horas de estudo pelo YouTube (sim, YouTube mesmo — pois não havia condições de pagar um curso) até que nasceu um projeto de vendas locais por meio da OLX e do Facebook.
+
+                    Desde então, percebemos o quanto nossos clientes, especialmente as mulheres, se encantam ao visitar nossa loja, com brilho nos olhos e cheias de expectativa para realizar seus sonhos ou atender suas necessidades.
+
+                    Com uma equipe engajada e ampla experiência em atendimento, montamos um ecossistema que atende tanto o atacado quanto o varejo, sempre com preços justos e foco na qualidade.
+
+                    Estabelecemos parcerias com grandes produtoras como Rosset, Marbella, fornecedores da China e Índia, Maroot's, entre outros.
+
+                    Nos destacamos nesse segmento pela empatia com nossos clientes, coragem e vontade de transformar sonhos em realidade. Hoje, lojistas de TODO O BRASIL geram renda com nossos produtos — e isso é motivo de enorme gratidão para nós.
+
+                    Se você chegou até aqui, certamente já faz parte dessa linda história. Com base nas nossas crenças, desejamos que Deus abençoe sua vida e ilumine seus passos. Até breve! ❤️
                   </InfoModal>
 
-                  <InfoModal center title="Trocas e Devoluções" trigger={<span className="cursor-pointer hover:underline">Trocas e Devoluções</span>}>
-                    Aceitamos trocas por defeito em até 7 dias. Entre em contato via WhatsApp para iniciar o processo.
+
+                  <InfoModal
+                    center
+                    title="Trocas e Devoluções"
+                    trigger={<span className="cursor-pointer hover:underline">Trocas e Devoluções</span>}
+                  >
+                    🔁 <strong>Política de Trocas e Devoluções</strong><br /><br />
+
+                    ✅ <strong>Troca por Defeito de Fabricação</strong><br />
+                    Aceitamos trocas por defeito de fabricação em até <strong>7 dias corridos</strong> após o recebimento.
+                    A peça deve estar <strong>sem uso, com etiqueta e nota fiscal</strong>.
+                    Após análise, o produto será substituído por outro igual ou similar (mesmo valor).
+                    Para iniciar o processo, entre em contato via WhatsApp.<br /><br />
+
+                    ⚠️ <strong>Trocas por Arrependimento ou Desistência</strong><br />
+                    Por se tratar de <strong>venda por atacado</strong>, não realizamos trocas ou devoluções por arrependimento, mudança de gosto ou escolha incorreta de modelos, tamanhos ou cores.
+                    O <strong>Art. 49 do CDC</strong>, que prevê o direito de arrependimento em até 7 dias, é aplicável apenas a consumidores finais (varejo).<br /><br />
+
+                    🚫 <strong>Itens sem possibilidade de troca</strong><br />
+                    - Peças em promoção ou liquidação<br />
+                    - Peças íntimas ou com sinais de uso<br />
+                    - Produtos sem etiqueta ou sem nota fiscal<br /><br />
+
+                    ℹ️ <strong>Importante</strong><br />
+                    Verifique atentamente os detalhes do seu pedido antes de concluir a compra.
+                    Prezamos pela qualidade dos nossos produtos e realizamos triagem prévia no envio para garantir que sua mercadoria chegue em perfeito estado.<br /><br />
+
+                    Em caso de dúvidas, estamos à disposição para te atender da melhor forma possível.
                   </InfoModal>
 
-                  <InfoModal center title="Perguntas Frequentes" trigger={<span className="cursor-pointer hover:underline">Perguntas Frequentes</span>}>
-                    <ul className="list-disc pl-4 space-y-1">
-                      <li>Pedido mínimo: R$300 ou 10 peças.</li>
-                      <li>Enviamos para todo o Brasil.</li>
-                      <li>Não precisa de CNPJ para comprar.</li>
-                    </ul>
+
+                  <InfoModal
+                    center
+                    title="Perguntas Frequentes"
+                    trigger={<span className="cursor-pointer hover:underline">Perguntas Frequentes</span>}
+                  >
+                    ❓ <strong>1. Como posso conhecer os produtos da loja?</strong><br />
+                    Você pode conhecer nossos produtos solicitando os catálogos via WhatsApp <br /><br />
+
+                    🛒 <strong>2. Como realizar uma compra?</strong><br />
+                    Basta escolher os produtos e:<br />
+                    - Adicionar ao carrinho no whatsapp, ou<br />
+                    - Informar os itens desejados via WhatsApp para que possamos montar seu orçamento completo.<br /><br />
+
+                    📦 <strong>3. Os produtos estão disponíveis em pronta entrega?</strong><br />
+                    Sim, todos os produtos dos catálogos são atualizados com estoque disponível. Consulte o vendedor para confirmar modelos e cores.<br /><br />
+
+                    💬 <strong>4. Como entro em contato com a loja?</strong><br />
+                    - WhatsApp: <a href="https://wa.me/5584981506259" target="_blank">(84) 98150-6259</a><br />
+                    - E-mail: <a href="mailto:wvitor.ccb@gmail.com">wvitor.ccb@gmail.com</a><br /><br />
+
+                    📦 <strong>5. Qual o pedido mínimo para atacado?</strong><br />
+                    O pedido mínimo para compras no atacado é de 10 peças sortidas. Pedido mínimo R$ 300.<br /><br />
+
+                    Em caso de dúvidas adicionais, fale conosco. Será um prazer atender você!
                   </InfoModal>
                 </div>
               </div>
