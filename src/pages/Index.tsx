@@ -397,9 +397,92 @@ const Index = () => {
               <div>
                 <h4 className="text-lg font-semibold mb-4">Institucional</h4>
                 <div className="flex flex-col space-y-2 text-primary text-sm">
-                  <InfoModal center title="Política de Privacidade" trigger={<span className="cursor-pointer hover:underline">Política de Privacidade</span>}>
-                    Respeitamos sua privacidade. Seus dados serão utilizados apenas para fins comerciais e nunca compartilhados com terceiros.
-                  </InfoModal>
+                  <InfoModal
+  center
+  title="Política de Privacidade"
+  trigger={<span className="cursor-pointer hover:underline">Política de Privacidade</span>}
+>
+  <div className="max-h-[70vh] overflow-y-auto text-justify pr-4 text-sm leading-relaxed text-muted-foreground space-y-4">
+    <p>
+      A Moda Praia GT atacado, pessoa jurídica de direito privado, com sede na Rua Erivan França 33, orla de Ponta Negra, Natal/RN, inscrita no CNPJ sob o nº 38.108.294/0001-42, leva a sua privacidade a sério e zela pela segurança e proteção dos dados de seus clientes, parceiros, fornecedores e usuários.
+    </p>
+    <p>
+      Esta Política de Privacidade visa informar como utilizamos e divulgamos os dados coletados na Loja: https://moda-praia-gt-catalogo.vercel.app/.
+    </p>
+    <p className="font-semibold uppercase">
+      AO ACESSAR A LOJA, ENVIAR COMUNICAÇÕES OU FORNECER DADOS, VOCÊ DECLARA ESTAR CIENTE E DE ACORDO COM ESTA POLÍTICA.
+    </p>
+
+    <h2 className="font-semibold">1. Definições</h2>
+    <ul className="list-disc pl-4 space-y-2">
+      <li><strong>Dados Pessoais:</strong> informações que identificam alguém (nome, CPF, IP, etc.).</li>
+      <li><strong>Dados Sensíveis:</strong> dados sobre origem racial, religião, política, saúde, biometria etc.</li>
+      <li><strong>Tratamento de Dados:</strong> coleta, uso, armazenamento, exclusão, entre outros.</li>
+      <li><strong>Leis de Proteção de Dados:</strong> LGPD - Lei nº 13.709/18.</li>
+    </ul>
+
+    <h2 className="font-semibold">2. Uso dos Dados</h2>
+    <ul className="list-disc pl-4 space-y-2">
+      <li>Viabilizar compras e entregas.</li>
+      <li>Entrar em contato via telefone, e-mail, ou mensagens.</li>
+      <li>Personalizar experiência e promoções.</li>
+    </ul>
+
+    <h2 className="font-semibold">3. Não fornecimento</h2>
+    <p>
+      Caso opte por não fornecer dados, algumas funcionalidades podem não estar disponíveis.
+    </p>
+
+    <h2 className="font-semibold">4. Dados coletados</h2>
+    <ul className="list-disc pl-4 space-y-2">
+      <li><strong>Contato:</strong> nome, telefone, e-mail, etc.</li>
+      <li><strong>Navegação:</strong> IP, localização, navegador, cookies, etc.</li>
+      <li><strong>Preferências:</strong> histórico e interesses de navegação.</li>
+    </ul>
+
+    <h2 className="font-semibold">5. Compartilhamento</h2>
+    <p>
+      Compartilhamos dados com parceiros, prestadores de serviços e em caso de fusão ou aquisição.
+    </p>
+
+    <h2 className="font-semibold">6. Transferência internacional</h2>
+    <p>
+      Os dados podem ser armazenados ou processados fora do Brasil.
+    </p>
+
+    <h2 className="font-semibold">7. Coleta automática</h2>
+    <p>
+      Utilizamos cookies, pixels e tecnologias similares. Você pode desabilitar cookies nas configurações do navegador.
+    </p>
+
+    <h2 className="font-semibold">8. Seus direitos</h2>
+    <p>
+      Você pode solicitar: confirmação, acesso, correção, exclusão, anonimização, revogação de consentimento, etc., conforme a LGPD.
+    </p>
+
+    <h2 className="font-semibold">9. Segurança</h2>
+    <p>
+      Adotamos medidas técnicas e organizacionais para proteger seus dados. Nenhum sistema, porém, é 100% seguro.
+    </p>
+
+    <h2 className="font-semibold">10. Links de terceiros</h2>
+    <p>
+      Não somos responsáveis pelas políticas de sites de terceiros acessados por links em nossa Loja.
+    </p>
+
+    <h2 className="font-semibold">11. Atualizações</h2>
+    <p>
+      Podemos atualizar esta política. Em caso de alterações relevantes, avisaremos por nossos canais.
+    </p>
+
+    <h2 className="font-semibold">12. Contato</h2>
+    <p>
+      Para exercer seus direitos ou tirar dúvidas: <a href="mailto:wvitor.ccb@gmail.com" className="text-primary hover:underline">wvitor.ccb@gmail.com</a>.<br />
+      Responsável: Wanderson Vitor Almeida.
+    </p>
+  </div>
+</InfoModal>
+
 
                   <InfoModal center title="Termos de Uso" trigger={<span className="cursor-pointer hover:underline">Termos de Uso</span>}>
                     Ao utilizar este site, você concorda com nossos termos. Todas as vendas seguem o Código de Defesa do Consumidor.
