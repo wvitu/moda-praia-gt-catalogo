@@ -5,6 +5,8 @@ import Logo from '@/components/Logo';
 import ProductCard from '@/components/ProductCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import FeatureCard from '@/components/FeatureCard';
+import InfoModal from '@/components/InfoModal';
+
 
 // Import images
 import heroImage from '@/assets/hero-beach-fashion.jpg';
@@ -359,55 +361,32 @@ const Index = () => {
 
       {/* Preços Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Política de Atacado
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Condições claras e transparentes
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="bg-card rounded-2xl p-8 shadow-elegant border border-border">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-8">
-                <div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">Primeira Compra</h3>
-                  <p className="text-3xl font-bold text-foreground mb-2">10 peças</p>
-                  <p className="text-muted-foreground">Mínimo (produtos variados)</p>
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">Pedido Mínimo</h3>
-                  <p className="text-3xl font-bold text-foreground mb-2">R$ 300</p>
-                  <p className="text-muted-foreground">Para envio</p>
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">Desconto</h3>
-                  <p className="text-3xl font-bold text-foreground mb-2">Caixa Fechada</p>
-                  <p className="text-muted-foreground">Condições especiais</p>
-                </div>
-              </div>
-              
-              <div className="border-t pt-6">
-                <h4 className="text-lg font-semibold mb-4 text-foreground">Formas de Pagamento:</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-muted-foreground">
-                  <div>• PIX/Transferência: Preço de atacado à vista</div>
-                  <div>• Cartão via Mercado Pago: Acréscimo de taxas</div>
-                </div>
-              </div>
-              
-              <div className="border-t pt-6 mt-6">
-                <h4 className="text-lg font-semibold mb-4 text-foreground">Retirada:</h4>
-                <p className="text-sm text-muted-foreground">
-                  R. Erivan França, 33 - Piso 1, Orla de Ponta Negra, Natal/RN - CEP: 59090-165
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="mt-2 space-x-4 flex flex-wrap justify-center items-center gap-4">
+  <InfoModal title="Política de Privacidade" trigger={<span className="text-primary hover:underline cursor-pointer">Política de Privacidade</span>}>
+    Respeitamos sua privacidade. Seus dados serão utilizados apenas para fins comerciais e nunca compartilhados com terceiros.
+  </InfoModal>
+
+  <InfoModal title="Termos de Uso" trigger={<span className="text-primary hover:underline cursor-pointer">Termos de Uso</span>}>
+    Ao utilizar este site, você concorda com nossos termos de uso. Todas as vendas são realizadas conforme regras do Código de Defesa do Consumidor.
+  </InfoModal>
+
+  <InfoModal title="Quem Somos" trigger={<span className="text-primary hover:underline cursor-pointer">Quem Somos</span>}>
+    A Moda Praia GT é referência em moda praia no atacado. Atuamos em todo o Brasil com foco em lojistas e revendedores.
+  </InfoModal>
+
+  <InfoModal title="Trocas e Devoluções" trigger={<span className="text-primary hover:underline cursor-pointer">Trocas e Devoluções</span>}>
+    Aceitamos trocas por defeito em até 7 dias. Entre em contato via WhatsApp para iniciar o processo.
+  </InfoModal>
+
+  <InfoModal title="Perguntas Frequentes" trigger={<span className="text-primary hover:underline cursor-pointer">Perguntas Frequentes</span>}>
+    <ul className="list-disc pl-4 space-y-2">
+      <li>Pedido mínimo: R$300 ou 10 peças.</li>
+      <li>Enviamos para todo o Brasil.</li>
+      <li>Não precisa de CNPJ para comprar.</li>
+    </ul>
+  </InfoModal>
+</div>
+
       </section>
 
       {/* Footer */}
